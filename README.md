@@ -1,73 +1,93 @@
-# Tower Grid
+<div align="center">
 
-**Unity Mobile Puzzle Game · C# · VContainer · URP**
+# TowerGrid
 
-An offline portfolio edition of a professionally developed mobile puzzle game focused on building a tower on a grid, combining spatial decisions, score bonuses, timed sessions, and meta-progression.
+**A grid-based mobile puzzle game built with Unity and C#**
 
-This repository presents the game's architecture, gameplay systems, and UI implementation. It is a team project that I contributed to professionally, not a solo-developed title.
+*Build a tower. Plan every placement. Chain bonuses to push your score higher.*
 
-## Gameplay
+**[Watch the trailer](docs/media/TowerGrid_Trailer.mp4)** · **[Explore the architecture](docs/ARCHITECTURE.md)** · **[View gameplay](#gameplay-preview)**
 
-- **Grid-based building:** Drag and place buildings of different sizes and types while respecting placement and support rules.
-- **Scoring system:** Earn points for placement, structural support, adjacency, completed floors, zoning, and combinations.
-- **Active skills:** Demolition, refresh, and rezoning mechanics affect available building choices and the current layout.
-- **Timed game loop:** Countdown, playing, tutorial, and game-over states handle match progression.
-- **Meta-progression:** Daily quests, shop items, customization, and battle pass screens.
-- **Local scores:** Best, average, and daily results are stored on the device in the offline edition.
+<a href="docs/media/TowerGrid_Trailer.mp4">
+  <img src="docs/media/TowerGrid_Cover.png" alt="TowerGrid — cinematic gameplay trailer cover" width="100%" />
+</a>
+
+<sub>Click the cover to open the 33-second gameplay trailer.</sub>
+
+</div>
+
+## Overview
+
+TowerGrid is a mobile building-puzzle game where players assemble a growing tower from different building pieces. Each placement affects the available space and can trigger score bonuses based on the current layout. Timed sessions, active skills, customization, and progression systems add variety to the core loop.
+
+This repository is an **offline portfolio edition** of a commercially developed **team project**, presented to showcase its gameplay systems, Unity architecture, and interface implementation.
+
+## Gameplay preview
+
+<div align="center">
+  <img src="docs/media/TowerGrid_Gameplay.gif" alt="TowerGrid gameplay — placing buildings and earning score bonuses" width="300" />
+</div>
+
+- **Grid-based building** — Place pieces of different sizes while accounting for available space and support constraints.
+- **Contextual scoring** — Earn points from placements, structural support, adjacency, floor completion, zoning, and combinations.
+- **Active abilities** — Use demolition, draft refresh, and rezoning mechanics to influence a run.
+- **Timed runs** — Progress through tutorial, countdown, active gameplay, and results states.
+- **Meta systems** — Explore shop, customization, daily tasks, and battle-pass interfaces.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center" width="33%"><img src="docs/media/TowerGrid_Building.png" alt="Building a tower" /></td>
+    <td align="center" width="33%"><img src="docs/media/TowerGrid_Combos.png" alt="Scoring and combo bonuses" /></td>
+    <td align="center" width="33%"><img src="docs/media/TowerGrid_Results.png" alt="Match results screen" /></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Building</strong></td>
+    <td align="center"><strong>Combos & bonuses</strong></td>
+    <td align="center"><strong>Results</strong></td>
+  </tr>
+</table>
 
 ## Engineering highlights
 
 | Area | Implementation |
 | --- | --- |
-| Architecture | Modular services and dependency injection with **VContainer** and scene-specific lifetime scopes |
-| Gameplay flow | Explicit state machine for tutorial, countdown, playing, and game-over phases |
-| Building mechanics | Placement validation, grid occupancy, support checks, building spawning, and scoring |
-| Game content | ScriptableObject catalogs and configuration assets for building types and visual variations |
-| UI systems | Scene UI binders, popup service, overlays, shops, quests, and progression interfaces |
-| Persistence | Local player settings, game progress, and scores |
-| Portfolio adaptation | Offline gameplay without corporate backend, tournament services, or attribution integration |
+| **Architecture & DI** | VContainer lifetime scopes separate project-level services from gameplay scene dependencies. |
+| **Core gameplay** | Grid occupancy and building placement checks are handled independently of the UI. |
+| **Score calculation** | A dedicated calculator evaluates placement and contextual scoring bonuses. |
+| **Game flow** | A state machine manages tutorial, countdown, playing, and game-over phases. |
+| **Content** | ScriptableObject-based building catalogs and configurations support different building types and visual sets. |
+| **UI & progression** | Popup/overlay services, shop screens, quests, cosmetic options, and battle-pass interfaces. |
+| **Offline adaptation** | Local match results and score storage replace dependencies on tournament and company services. |
+
+### Code worth exploring
+
+- [`BuildingGrid.cs`](Assets/Game/Scripts/Gameplay/Building/Grid/BuildingGrid.cs) — occupancy, boundaries, placement, and support checks.
+- [`BuildingScoreCalculator.cs`](Assets/Game/Scripts/Gameplay/Building/BuildingScoreCalculator.cs) — scoring rules and bonuses.
+- [`GameplayStateMachine.cs`](Assets/Game/Scripts/Gameplay/Core/StateMachine/GameplayStateMachine.cs) — gameplay state transitions.
+- [`ProjectLifetimeScope.cs`](Assets/Game/Scripts/GameRoot/ProjectLifetimeScope.cs) — project-level dependency registration.
+- [`LocalScoreStorage.cs`](Assets/Game/Scripts/Gameplay/Core/Services/LocalScoreStorage.cs) — local score persistence for this portfolio edition.
+
+For the scene flow and service boundaries, see the [Architecture Overview](docs/ARCHITECTURE.md).
 
 ## Tech stack
 
-**Unity, C#, VContainer, UniTask, Universal Render Pipeline (URP), Unity UI, ScriptableObjects, PlayerPrefs.**
+`Unity` · `C#` · `VContainer` · `UniTask` · `URP` · `Unity UI` · `ScriptableObjects`
 
-The project also contains third-party visual effects and haptics packages. These are separate dependencies with their own licensing requirements.
+## Running the project
 
-## Project structure
+1. Clone or download the repository and add its root folder in **Unity Hub**.
+2. Open it using the **Unity Editor and render-pipeline combination you have verified locally**; wait for packages to resolve.
+3. Open [`Assets/Game/Scenes/Boot.unity`](Assets/Game/Scenes/Boot.unity) and enter **Play Mode**.
+4. A fresh local profile starts with the tutorial; returning profiles proceed to the main menu.
 
-```text
-Assets/Game/Scripts/
-├── GameRoot/                 # Bootstrap, global services, popups, scene management
-├── Gameplay/
-│   ├── Building/             # Grid placement, building models, scoring
-│   ├── Core/                 # Game loop, state machine, timer, local scores
-│   ├── Root/                 # Gameplay scene entry point and lifetime scope
-│   └── Skills/               # Demolition, refresh, rezoning
-├── MainMenu/
-│   ├── BattlePass/           # Progression and rewards
-│   ├── DailyTasks/           # Quest tracking
-│   ├── Shop/                 # Cosmetics, progression, wallet
-│   └── Root/                 # Menu scene configuration
-└── Tutorial/                 # Tutorial scene systems
-```
+> **Editor compatibility:** The provided `ProjectVersion.txt` records **Unity 2022.3.62f3**, while the package manifest references **URP 17.0.4**. The editor/package combination should be checked before attempting a fresh import on another machine.
 
-See [Architecture Overview](docs/ARCHITECTURE.md) for a more detailed explanation of the game flow and service boundaries.
+## Project background
 
-## Getting started
+This project was developed commercially by a team. I contributed as a Unity developer; the repository is presented as a portfolio reference, **not** as a claim of sole authorship of every system, script, or asset.
 
-1. Clone the repository and add its root folder in **Unity Hub**.
-2. Open the project with the Unity Editor version verified for your environment, and allow package resolution to finish.
-3. Open `Assets/Game/Scenes/Boot.unity` and enter Play Mode.
-4. On a fresh profile, the game starts with a tutorial session. Subsequent launches proceed to the main menu.
+For the portfolio edition, integrations requiring company services, attribution, or a tournament backend were removed or replaced with local implementations so the core gameplay can be demonstrated independently.
 
-**Editor compatibility:** `ProjectSettings/ProjectVersion.txt` currently records Unity `2022.3.62f3`, while the provided package manifest references URP `17.0.4`. These versions may not match on a clean installation. Use a verified editor/package combination and recheck the rendering configuration if importing from scratch.
-
-## Offline portfolio edition
-
-The original project depended on external tournament, attribution, and company infrastructure. This edition uses a local match flow and local score storage; analytics events are handled by a no-op adapter. There is no requirement for a corporate backend or tournament account to play the local game.
-
-## Project attribution and usage
-
-This codebase originated from a commercial team project and is shared as an authorized portfolio example. The repository should not be interpreted as a claim that every asset, script, or gameplay feature was created by one developer.
-
-Third-party assets and plugins are governed by their own licenses. Public repository access does **not** grant permission to redistribute or reuse those assets. No general-purpose open-source license is declared for this project.
+**Asset and usage note:** Third-party plugins and art assets retain their respective licenses. This repository does not grant redistribution rights to those packages, and no open-source license is declared for the complete project.
