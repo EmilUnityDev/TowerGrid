@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1646318477a1a4861bdc064b027d7d1f, type: 3}
+  m_Name: DailyQuestCatalog
+  m_EditorClassIdentifier: 
+  quests:
+  - id: complete_3_floors
+    title: Complete 3 Floors
+    category: 0
+    questType: 0
+    targetValue: 3
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: complete_5_floors
+    title: Complete 5 Floors
+    category: 0
+    questType: 1
+    targetValue: 5
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: complete_without_overflow
+    title: Complete a Match Without Critical Overflow
+    category: 0
+    questType: 2
+    targetValue: 1
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: use_draft_refresh_2
+    title: Use Draft Refresh 2 Times
+    category: 1
+    questType: 3
+    targetValue: 2
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: use_rezone_2
+    title: Use Rezone 2 Times
+    category: 1
+    questType: 4
+    targetValue: 2
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: use_demolition_1
+    title: Use Demolition 1 Time
+    category: 1
+    questType: 5
+    targetValue: 1
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: complete_without_skills
+    title: Complete a Match Without Using Skills
+    category: 1
+    questType: 6
+    targetValue: 1
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: score_3000_single_match
+    title: Score 3000 Points in a Single Match
+    category: 2
+    questType: 7
+    targetValue: 3000
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: score_5000_total
+    title: Score 5000 Total Points
+    category: 2
+    questType: 8
+    targetValue: 5000
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: get_3_combos
+    title: Get 3 Combos
+    category: 2
+    questType: 9
+    targetValue: 3
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: make_3_successful_moves
+    title: Make a Streak of 3 Successful Moves
+    category: 2
+    questType: 10
+    targetValue: 3
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: place_10_residential
+    title: Place 10 Residential Fragments
+    category: 3
+    questType: 11
+    targetValue: 10
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: place_8_commercial
+    title: Place 8 Commercial Fragments
+    category: 3
+    questType: 12
+    targetValue: 8
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: place_6_service
+    title: Place 6 Service Fragments
+    category: 3
+    questType: 13
+    targetValue: 6
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: place_5_premium
+    title: Place 5 Premium Fragments
+    category: 3
+    questType: 14
+    targetValue: 5
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: commercial_lower_2
+    title: Build 2 Commercial Floors in the Lower Zone
+    category: 4
+    questType: 15
+    targetValue: 2
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: residential_middle_2
+    title: Build 2 Residential Floors in the Middle Zone
+    category: 4
+    questType: 16
+    targetValue: 2
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: premium_upper_3
+    title: Place 3 Premium Fragments in the Upper Zone
+    category: 4
+    questType: 17
+    targetValue: 3
+    softCurrencyReward: 30
+    battlePassPointsReward: 35
+  - id: service_residential_adjacency_5
+    title: Create 5 Beneficial Service and Residential Adjacencies
+    category: 4
+    questType: 18
+    targetValue: 5
+    softCurrencyReward: 30
+    battlePassPointsReward: 35

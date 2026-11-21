@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33beb01a3170f42068e5915aa624c5ee, type: 3}
+  m_Name: ShopItemsDatabase
+  m_EditorClassIdentifier: 
+  shopPrefab: {fileID: 3770666812678059716, guid: 79d34a6abdea842758b41a2a755a7de0, type: 3}
+  items:
+  - itemId: block_01
+    category: 0
+    sprite: {fileID: 21300000, guid: 69399024028824025ac9477f5b5a64b2, type: 3}
+  - itemId: block_02
+    category: 0
+    sprite: {fileID: 21300000, guid: 226d73808a313464ba46ec1de3d1430e, type: 3}
+  - itemId: block_03
+    category: 0
+    sprite: {fileID: 21300000, guid: 58e9e511e88e9494b91786c3f0e7b5df, type: 3}
+  - itemId: block_04
+    category: 0
+    sprite: {fileID: 21300000, guid: 3f3127ab18ddb409fb66c55a5b76c244, type: 3}
+  - itemId: block_05
+    category: 0
+    sprite: {fileID: 21300000, guid: c6678759a384b45c98cc34b25e82c52c, type: 3}
+  - itemId: backs_01
+    category: 1
+    sprite: {fileID: 21300000, guid: 67289ae5166be412eb2114a123eb2fd3, type: 3}
+  - itemId: backs_02
+    category: 1
+    sprite: {fileID: 21300000, guid: 81a62d43cf7b04112bd6f347a1d72387, type: 3}
+  - itemId: backs_03
+    category: 1
+    sprite: {fileID: 21300000, guid: dfa453be4eafb4148beffc71c6288645, type: 3}
+  - itemId: backs_04
+    category: 1
+    sprite: {fileID: 21300000, guid: 7947cb41cf1c04cca8d222f92b6e3d84, type: 3}
+  - itemId: backs_05
+    category: 1
+    sprite: {fileID: 21300000, guid: 449dc04c4ad78498ea92c547d7f56779, type: 3}
+  - itemId: playerbacks_01
+    category: 2
+    sprite: {fileID: 21300000, guid: 5ca2585cf53a94312b4f9a4f5323ca8d, type: 3}
+  - itemId: playerbacks_02
+    category: 2
+    sprite: {fileID: 21300000, guid: b775ece7522b9411d8fa9976328cb412, type: 3}
+  - itemId: playerbacks_03
+    category: 2
+    sprite: {fileID: 21300000, guid: 4b345492b1d8b4b568e8c1df1722655f, type: 3}
+  - itemId: playerbacks_04
+    category: 2
+    sprite: {fileID: 21300000, guid: b7bb8fc55278b41d184fc09dd1dc6b20, type: 3}
+  - itemId: playerbacks_05
+    category: 2
+    sprite: {fileID: 21300000, guid: 2c15e0be0ec764a39a1f7f9e3021c266, type: 3}
+  - itemId: playerbacks_06
+    category: 2
+    sprite: {fileID: 21300000, guid: 54541a58e777148659708b6edce038f3, type: 3}
+  - itemId: playerbacks_07
+    category: 2
+    sprite: {fileID: 21300000, guid: 94cc2210c738244b9bef4f2c6258ca4d, type: 3}
+  - itemId: playerbacks_08
+    category: 2
+    sprite: {fileID: 21300000, guid: 7341203348f3f438daa8cb49510738da, type: 3}
+  - itemId: playerbacks_09
+    category: 2
+    sprite: {fileID: 21300000, guid: fddb9426d268947c79b259ede379fb2a, type: 3}
+  - itemId: playerbacks_10
+    category: 2
+    sprite: {fileID: 21300000, guid: a9a881a8409414c9d9e2599e371e33a5, type: 3}
+  - itemId: playerframe_01
+    category: 3
+    sprite: {fileID: 21300000, guid: ab19d2a4eb9d24bfeb317fbb232026c6, type: 3}
+  - itemId: playerframe_02
+    category: 3
+    sprite: {fileID: 21300000, guid: f9068295983b04d53a96f2a98abdd7dc, type: 3}
+  - itemId: playerframe_03
+    category: 3
+    sprite: {fileID: 21300000, guid: 190eebfdc9fcd4061bb0f9a94cbfc62b, type: 3}
+  - itemId: playerframe_04
+    category: 3
+    sprite: {fileID: 21300000, guid: b28699e7596b54e6a90b74f003d2f64f, type: 3}
+  - itemId: playerframe_05
+    category: 3
+    sprite: {fileID: 21300000, guid: 895a1256392204325b2309419e60d12b, type: 3}
+  - itemId: playerframe_06
+    category: 3
+    sprite: {fileID: 21300000, guid: 6644f554414344a10975861d61b33ba2, type: 3}
+  - itemId: playerframe_07
+    category: 3
+    sprite: {fileID: 21300000, guid: 9dc203a28a39145a8a5b338e3b6035fb, type: 3}
+  - itemId: playerframe_08
+    category: 3
+    sprite: {fileID: 21300000, guid: ae60d21572890432b840d597da6a0053, type: 3}
+  - itemId: playerframe_09
+    category: 3
+    sprite: {fileID: 21300000, guid: 72e3ab030e85b4bfa98d05e67591eb88, type: 3}
+  - itemId: playerframe_10
+    category: 3
+    sprite: {fileID: 21300000, guid: 2d79b9e27b1a340e28714a6b411605ed, type: 3}
