@@ -28,11 +28,11 @@ This repository is an **offline portfolio edition** of a commercially developed 
   <img src="docs/media/TowerGrid_Gameplay.gif" alt="TowerGrid gameplay — placing buildings and earning score bonuses" width="300" />
 </div>
 
-- **Grid-based building** — Place pieces of different sizes while accounting for available space and support constraints.
-- **Contextual scoring** — Earn points from placements, structural support, adjacency, floor completion, zoning, and combinations.
-- **Active abilities** — Use demolition, draft refresh, and rezoning mechanics to influence a run.
-- **Timed runs** — Progress through tutorial, countdown, active gameplay, and results states.
-- **Meta systems** — Explore shop, customization, daily tasks, and battle-pass interfaces.
+- **Grid-based building** - Place pieces of different sizes while accounting for available space and support constraints.
+- **Contextual scoring** - Earn points from placements, structural support, adjacency, floor completion, zoning, and combinations.
+- **Active abilities** - Use demolition, draft refresh, and rezoning mechanics to influence a run.
+- **Timed runs** - Progress through tutorial, countdown, active gameplay, and results states.
+- **Meta systems** - Explore shop, customization, daily tasks, and battle-pass interfaces.
 
 ## Screenshots
 
@@ -63,11 +63,11 @@ This repository is an **offline portfolio edition** of a commercially developed 
 
 ### Code worth exploring
 
-- [`BuildingGrid.cs`](Assets/Game/Scripts/Gameplay/Building/Grid/BuildingGrid.cs) — occupancy, boundaries, placement, and support checks.
-- [`BuildingScoreCalculator.cs`](Assets/Game/Scripts/Gameplay/Building/BuildingScoreCalculator.cs) — scoring rules and bonuses.
-- [`GameplayStateMachine.cs`](Assets/Game/Scripts/Gameplay/Core/StateMachine/GameplayStateMachine.cs) — gameplay state transitions.
-- [`ProjectLifetimeScope.cs`](Assets/Game/Scripts/GameRoot/ProjectLifetimeScope.cs) — project-level dependency registration.
-- [`LocalScoreStorage.cs`](Assets/Game/Scripts/Gameplay/Core/Services/LocalScoreStorage.cs) — local score persistence for this portfolio edition.
+- [`BuildingGrid.cs`](Assets/Game/Scripts/Gameplay/Building/Grid/BuildingGrid.cs) - occupancy, boundaries, placement, and support checks.
+- [`BuildingScoreCalculator.cs`](Assets/Game/Scripts/Gameplay/Building/BuildingScoreCalculator.cs) - scoring rules and bonuses.
+- [`GameplayStateMachine.cs`](Assets/Game/Scripts/Gameplay/Core/StateMachine/GameplayStateMachine.cs) - gameplay state transitions.
+- [`ProjectLifetimeScope.cs`](Assets/Game/Scripts/GameRoot/ProjectLifetimeScope.cs) - project-level dependency registration.
+- [`LocalScoreStorage.cs`](Assets/Game/Scripts/Gameplay/Core/Services/LocalScoreStorage.cs) - local score persistence for this portfolio edition.
 
 For the scene flow and service boundaries, see the [Architecture Overview](docs/ARCHITECTURE.md).
 
